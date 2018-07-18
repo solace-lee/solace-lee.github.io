@@ -150,7 +150,8 @@ header
 	font-weight: bold;
 	float: right;
 	line-height: 45px;
-	padding: 0 50px;
+	padding: 0 60px;
+	font-size: 1.2em;
 }
 
 
@@ -196,6 +197,7 @@ header
 	color: #333;
 	padding: 0px 25px;
 	margin: 10px 5px;
+	font-size: 1.2em;
 }
 
 .mini-nav .active
