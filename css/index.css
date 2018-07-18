@@ -65,6 +65,8 @@ header
 .mini-nav
 {
 	display: none;
+	height: 40px;
+	box-shadow: 1px 1px 5px #82b440;
 }
 
 .normal-nav .logo
