@@ -295,6 +295,14 @@ header
 	-webkit-box-orient: vertical;
 }
 
+.more
+{
+	font-size: 1.4em;
+	padding: 10px;
+	float: right;
+	color: #82B440;
+}
+
 .right
 {
 	flex: 1;
