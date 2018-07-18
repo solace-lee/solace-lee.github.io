@@ -11,9 +11,9 @@ a
 
 a:hover
 {
-	text-shadow: 1px 1px 2px rgba(223,92,100,0.8);
+	text-shadow: 1px 1px 2px rgba(130,180,64,0.8);
 }
-/*b24a50*/
+/*82b440 82b440*/
 /*主页页面背景图*/
 .main-img
 {
@@ -57,7 +57,7 @@ header
 	overflow: hidden;
 	padding: 0 50px;
 	border: 1px solid #fff;
-	box-shadow: 1px 1px 5px #b24a50;
+	box-shadow: 1px 1px 5px #82b440;
 }
 
 .mini-nav
@@ -76,7 +76,7 @@ header
 
 .normal-nav .logo a
 {
-	color: #b24a50;
+	color: #82b440;
 	font-size: 22px;
 	padding: 0 20px;
 	font-weight: 800;
@@ -108,14 +108,14 @@ header
 
 .normal-nav .active
 {
-	background: rgba(223,92,100,0.8);
+	background: rgba(130,180,64,0.8);
 	border-radius: 0 0 8px 8px;
 	box-shadow: 0 4px 5px #fff;
 }
 
 .normal-nav .menu ul li a:hover
 {
-	background: rgba(223,92,100,0.6);
+	background: rgba(130,180,64,0.6);
 	border-radius: 0 0 8px 8px;
 	box-shadow: 0 4px 5px #fff;
 }
@@ -132,7 +132,7 @@ header
 
 .mini-nav .logo a
 {
-	color: #b24a50;
+	color: #82b440;
 	font-size: 22px;
 	padding: 0 20px;
 	font-weight: 800;
@@ -142,7 +142,7 @@ header
 .mini-nav span
 {
 	/*display: none;*/
-	color: #B24A50;
+	color: #82b440;
 	font-weight: bold;
 	float: right;
 	line-height: 40px;
@@ -164,7 +164,7 @@ header
 
 .mini-nav span:hover
 {
-	text-shadow: 1px 1px 2px rgba(223,92,100,0.8);
+	text-shadow: 1px 1px 2px rgba(130,180,64,0.8);
 }
 
 .mini-nav .minimenu ul
@@ -196,14 +196,14 @@ header
 
 .mini-nav .active
 {
-	background: rgba(223,92,100,0.8);
+	background: rgba(130,180,64,0.8);
 	border-radius: 6px;
-	/*box-shadow: 0 4px 5px #B24A50;*/
+	/*box-shadow: 0 4px 5px #82b440;*/
 }
 
 .mini-nav .minimenu ul li a:hover
 {
-	background: rgba(223,92,100,0.6);
+	background: rgba(130,180,64,0.6);
 	border-radius: 6px;
 	box-shadow: 0 4px 5px #fff;
 }
@@ -229,7 +229,7 @@ header
 	background: rgba(255,255,255,0.8);
 	padding: 20px;
 	border-radius: 10px;
-	box-shadow: 1px 1px 6px #b24a50;
+	box-shadow: 1px 1px 6px #82b440;
 	/*text-align: center;*/
 }
 
@@ -243,7 +243,7 @@ header
 
 #welcome h1,a
 {
-	color: #b24a50;
+	color: #82b440;
 }
 
 
@@ -254,7 +254,7 @@ header
 
 .title a
 {
-	color: #b24a50;
+	color: #82b440;
 	font-size: 30px;
 	padding: 10px 0;
 }
@@ -290,7 +290,7 @@ header
 
 .right a
 {
-	color: #b24a50;
+	color: #82b440;
 }
 
 .recent
@@ -298,7 +298,7 @@ header
 	font-size: 20px;
 	background: rgba(255,255,255,0.8);
 	border-radius: 10px;
-	box-shadow: 1px 1px 6px #b24a50;
+	box-shadow: 1px 1px 6px #82b440;
 	padding: 20px;
 	margin-bottom: 20px;
 }
@@ -321,7 +321,7 @@ header
 	padding: 20px;
 	background: rgba(255,255,255,0.8);
 	border-radius: 10px;
-	box-shadow: 1px 1px 6px #b24a50;
+	box-shadow: 1px 1px 6px #82b440;
 	margin: 20px 0;
 }
 
