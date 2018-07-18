@@ -13,5 +13,5 @@ window.onload=function(){
 
 	function more(e){
 		e.style.display="none";
-		e.parent.children[2].style.overflow="hidden"
+		e.parent.childnodes[2].style.overflow="hidden"
 	}
