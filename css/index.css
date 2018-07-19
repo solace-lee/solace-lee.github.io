@@ -140,7 +140,6 @@ header
 	font-size: 22px;
 	padding: 0 20px;
 	font-weight: 800;
-	
 }
 
 .mini-nav span
@@ -150,7 +149,7 @@ header
 	font-weight: bold;
 	float: right;
 	line-height: 45px;
-	padding: 0 60px;
+	padding: 0 55px;
 	font-size: 1.2em;
 }
 
@@ -301,6 +300,15 @@ header
 	padding: 10px;
 	float: right;
 	color: #82B440;
+}
+
+.hide
+{
+	font-size: 1.4em;
+	padding: 10px;
+	float: right;
+	color: #82B440;
+	display: none;
 }
 
 .right
