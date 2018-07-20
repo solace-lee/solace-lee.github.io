@@ -1,12 +1,10 @@
-## Welcome to GitHub Pages
+## 欢迎来到李祖明的GitHub库
 
-You can use the [editor on GitHub](https://github.com/solace-lee/solace.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+		你在这里可以看到我的博客源代码和其他项目的源代码，如果你有关于这些项目更好的建议，欢迎在这里提交你的建议。
+		
+### 这是一篇使用Markdown语言编写的项目说明，是对我的博客版本更替做记录。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+以下是Markdown的基本语法
 
 ```markdown
 Syntax highlighted code block
@@ -31,7 +29,3 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 ### Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/solace-lee/solace.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
