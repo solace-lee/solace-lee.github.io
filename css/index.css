@@ -281,6 +281,7 @@ header
 .tag
 {
 	display: inline-block;
+	padding: 0 10px;
 }
 
 .txt
@@ -290,7 +291,7 @@ header
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
-	-webkit-line-clamp: 5;
+	-webkit-line-clamp: 4;
 	-webkit-box-orient: vertical;
 }
 
@@ -314,6 +315,8 @@ header
 .right
 {
 	flex: 1;
+	/*position: fixed;
+	right: 0;*/
 	margin: 10px;
 	font-size: 1.6em;
 }
