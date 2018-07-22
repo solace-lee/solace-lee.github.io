@@ -71,3 +71,5 @@ function hide(e) {
 	$(e).parent().find('.txt').css('-webkit-line-clamp', '3');
 	$(e).parent().find('.more').css('display', 'block')
 };
+
+//nav点击事件
