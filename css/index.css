@@ -124,7 +124,7 @@ header {
 	top: 50px;
 	left: 0;
 	min-height: 300px;
-	display: flex;
+	display: inline-flex;
 	color: #333;
 }
 
@@ -213,6 +213,10 @@ a {
 .timeline-ul li a
 {
 	margin: 0 10px;
+}
+
+.timeline-ul li span{
+	color: #82B440;
 }
 
 .right {
