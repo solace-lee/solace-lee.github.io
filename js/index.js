@@ -75,7 +75,33 @@ function hide(e) {
 };
 
 //nav点击事件
-function timeline(e){
+function active(e){
 	$('.active').removeClass('active');
 	$(e).addClass('active');
+	var txt=$(e).text();
+	switch(txt){
+		case('首页'):
+		break;
+		case('时间轴'):
+		timeline();
+		break;
+		case('标签'):
+		label();
+		break;
+		case('项目'):
+		project();
+		break;
+		case('关于我'):
+		about();
+		break;
+	}
+};
+
+function timeline(){
+	$('#welcome').css('display','none');
+	$('.article').text('');
+	$.each(database, function(index, info) {
+				var article = '<div class="article">' + info['title'] + '<div class="info"><div class="time">' + info['date'] + '</div></div></div>';
+				$('.article').append(article);
+			});
 }
