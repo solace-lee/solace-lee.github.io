@@ -101,7 +101,7 @@ function timeline(){
 	$('#welcome').css('display','none');
 	$('.article').text('');
 	$.each(database, function(index, info) {
-				var article = '<div class="article">' + info['title'] + '<div class="info"><div class="time">' + info['date'] + '</div></div></div>';
+				var article = info['title'] + '<div class="info"><div class="time">' + info['date'] + '</div></div>';
 				$('.article').append(article);
 			});
 }
