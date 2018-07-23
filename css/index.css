@@ -198,6 +198,23 @@ a {
 	display: none;
 }
 
+.timeline-ul
+{
+	padding: 0 20px;
+}
+
+.timeline-ul li
+{
+	margin: 10px 20px;
+	font-size: 1.8em;
+	width: 100%;
+}
+
+.timeline-ul li a
+{
+	margin: 0 10px;
+}
+
 .right {
 	flex: 1;
 	margin: 10px;
@@ -337,11 +354,12 @@ footer .copy {
 	.normal-nav .menu ul li a:hover {
 		border-radius: 6px;
 	}
+
 	.right {
 		display: none;
 	}	
 	.content {
-		padding: 0px;
+		padding: 0px;		
 	}
 }
 

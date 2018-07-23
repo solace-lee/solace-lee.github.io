@@ -98,10 +98,13 @@ function active(e){
 };
 
 function timeline(){
-	$('#welcome').css('display','none');
-	$('.article').text('');
+	$('.left').text('');
+	var article="<div class='article'></div>";
+	$('.left').append(article);
+	var ul="<ul class='timeline-ul'></ul>";
+	$('.article').append(ul);
 	$.each(database, function(index, info) {
-				var article = info['title'] + '<div class="info"><div class="time">' + info['date'] + '</div></div>';
-				$('.article').append(article);
+				var content ='<li>'+info['date']+'<a>'+info['title']+'</a><span>'+info['label']+'</span></li>';
+				$('.timeline-ul').append(content);
 			});
 }
