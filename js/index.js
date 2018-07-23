@@ -51,12 +51,14 @@ function tagname(){
 
 
 //响应式-小屏状态下的菜单按钮动作
-$('.minimenu').click(function() {
-	$('.minimenu').css('display', 'none');
+$('.menu').click(function() {
+	$('.menu').css('right', '-100%');
+	$('.menu-ul').css('right','-150px');
 });
 
 function menu() {
-	$('.minimenu').css('display', 'block');
+	$('.menu').css('right', '0');
+	$('.menu-ul').css('right','0');
 };
 
 //主页中显示更多和隐藏的动作
@@ -73,3 +75,7 @@ function hide(e) {
 };
 
 //nav点击事件
+function timeline(e){
+	$('.active').removeClass('active');
+	$(e).addClass('active');
+}
