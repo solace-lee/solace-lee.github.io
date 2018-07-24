@@ -25,21 +25,8 @@ function main() {
 			for(var i = 0; i < 5; i++) {
 				var limit = '<div class="article"><div class="title"><a href="'+database[i].code_link+'">' + database[i].title + '</a></div><div class="info"><div class="time">' + database[i].date + '</div><div class="tag"><span onclick="tag(this)">'+database[i].label + '</span></div></div><div class="txt">' + database[i].content + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
 				$left.append(limit);
-				//遍历标签数组，分别将标签添加到left中
-				//<span onclink="tag(this)">' + database[i].label + '</span>
-//				if($.isArray(database[i].label)){
-//					for(var j=0;j<database[i].label.length;j++){
-//						var span='<span onclick="tag(this)">'+database[i].label[j] + ',</span>';
-//						$('.tag').append(span);	
-//					}
-//				}
-//				else{
-//					var span='<span onclick="tag(this)">'+database[i].label + '</span>';
-//						$('.tag').append(span);
-//				}
 				//同时将标题也追加到右侧最近更新中去
-				var limitrecent = '<li><a href="#">' + database[i].title + '</a></li>';
-				
+				var limitrecent = '<li><a href="#">' + database[i].title + '</a></li>';	
 				$('.recent-ul').append(limitrecent);
 			}
 		}
