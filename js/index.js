@@ -23,7 +23,7 @@ function main() {
 		} else {
 			//如果Jason中的数据大于5条则取最前的5条数据append到left中
 			for(var i = 0; i < 5; i++) {
-				var limit = '<div class="article"><div class="title"><a href="'+database[i].code_link+'">' + database[i].title + '</a></div><div class="info"><div class="time">' + database[i].date + '</div><div class="tag"><span onclick="tag(this)">'+database[i].label + '</span></div></div><div class="txt">' + database[i].content + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
+				var limit = '<div class="article"><div class="title"><a href="'+database[i].code_link+'">' + database[i].title + '</a></div><div class="info"><div class="time">' + database[i].date + '</div><div class="tag">'+database[i].label + '</div></div><div class="txt">' + database[i].content + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
 				$left.append(limit);
 				//同时将标题也追加到右侧最近更新中去
 				var limitrecent = '<li><a href="#">' + database[i].title + '</a></li>';	
@@ -31,6 +31,7 @@ function main() {
 			}
 		}
 		tagname();
+		tagChange();
 	})
 };
 
@@ -54,10 +55,10 @@ function tagname() {
 };
 
 //响应式-小屏状态下的菜单按钮动作
-$('.menu').click(function() {
+function menuhide() {
 	$('.menu').css('right', '-100%');
 	$('.menu-ul').css('right', '-150px');
-});
+};
 
 function menu() {
 	$('.menu').css('right', '0');
@@ -100,6 +101,7 @@ function active(e) {
 	}
 };
 
+//时间轴点击事件,加工.left中的数据
 function timeline() {
 	$('.left').text('');
 	var article = "<div class='article'></div>";
@@ -111,6 +113,24 @@ function timeline() {
 		$('.timeline-ul').append(content);
 	});
 };
+
+
+//搜索.tag将字符串tag转化为独立切带有span标签的标签,为方便后面坐标签的点击动作
+function tagChange(){
+	var tags=$('.tag');
+	for(var i=0;i<tags.length;i++){
+		var str=tags[i].innerHTML;
+		var arr=str.split(',');
+		$(tags[i]).text('');
+		for(var j=0;j<arr.length;j++){
+			var span='<span onclick="label(this)">'+arr[j]+'</span>';
+			var $a=$(tags[i]);
+			$a.append(span);
+		}
+	}
+
+};
+
 
 function label(e) {
 	$('.left').text('');

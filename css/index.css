@@ -171,8 +171,11 @@ a {
 
 .tag {
 	display: inline-block;
-	margin: 0 10px;
-	padding: 5px;
+}
+
+.tag span {
+	padding: 5px 10px;
+	margin: 0 5px;
 	background: #eee;
 	border-radius: 6px;
 }
@@ -202,25 +205,22 @@ a {
 	display: none;
 }
 
-.timeline-ul
-{
+.timeline-ul {
 	padding: 0 20px;
 	width: 100%;
 }
 
-.timeline-ul li
-{
+.timeline-ul li {
 	margin: 10px 20px;
 	line-height: 1.8em;
 	font-size: 1.8em;
 }
 
-.timeline-ul li a
-{
+.timeline-ul li a {
 	margin: 0 20px;
 }
 
-.timeline-ul li span{
+.timeline-ul li span {
 	color: #82B440;
 	background: #eee;
 	padding: 5px;
@@ -297,13 +297,12 @@ footer .copy {
 }
 
 
-
 /*响应式布局-小屏*/
+
 @media only screen and (max-width:700px) {
 	.main-img {
 		font-size: 8px;
 	}
-	
 	.normal-nav {
 		padding: 0 10px;
 	}
@@ -366,22 +365,19 @@ footer .copy {
 	.normal-nav .menu ul li a:hover {
 		border-radius: 6px;
 	}
-
 	.right {
 		display: none;
-	}	
+	}
 	.content {
-		padding: 0px;		
+		padding: 0px;
 	}
 }
 
-@media only screen and (max-width:850px)
-{
-	.logo p{
+@media only screen and (max-width:850px) {
+	.logo p {
 		display: none;
 	}
 }
-
 
 @media only screen and (min-width:1600px) {
 	.main-img {
