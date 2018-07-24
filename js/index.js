@@ -1,13 +1,11 @@
 //声明一个全局对象存储Jason数据
 var database = {};
 //声明一个全局数组存取标签
-var tag=[];
+var tag = [];
 
 $(window).load(function() {
 	main();
 })
-
-
 
 //加载首页主数据和最近更新的数据
 function main() {
@@ -17,7 +15,7 @@ function main() {
 		if(database.length < 5) {
 			//如果Jason中的数据少于5条则遍历数据并append到left中
 			$.each(database, function(index, info) {
-				var article = '<div class="article"><div class="title"><a href="">' + info['title'] + '</a></div><div class="info"><div class="time">' + info['date'] + '</div><div class="tag">' + info['label'] + '</div></div><div class="txt">' + info['content'] + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
+				var article = '<div class="article"><div class="title"><a href="'+info[code_link]+'">' + info['title'] + '</a></div><div class="info"><div class="time">' + info['date'] + '</div><div class="tag">' + info['label'] + '</div></div><div class="txt">' + info['content'] + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
 				var recent = '<li><a href="#">' + info['title'] + '</a></li>';
 				$left.append(article);
 				$('.recent-title').find('ul').append(recent);
@@ -25,40 +23,45 @@ function main() {
 		} else {
 			//如果Jason中的数据大于5条则取最前的5条数据append到left中
 			for(var i = 0; i < 5; i++) {
-				var limit = '<div class="article"><div class="title"><a href="">' + database[i].title + '</a></div><div class="info"><div class="time">' + database[i].date + '</div><div class="tag">' + database[i].label + '</div></div><div class="txt">' + database[i].content + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
+				var limit = '<div class="article"><div class="title"><a href="'+database[i].code_link+'">' + database[i].title + '</a></div><div class="info"><div class="time">' + database[i].date + '</div><div class="tag">' + database[i].label + '</div></div><div class="txt">' + database[i].content + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
 				//同时将标题也追加到右侧最近更新中去
 				var limitrecent = '<li><a href="#">' + database[i].title + '</a></li>';
 				$left.append(limit);
 				$('.recent-ul').append(limitrecent);
 			}
 		}
-			tagname();
+		tagname();
 	})
 };
 
-
 //获取Jason数据流中的标签名,并把存储标签名的数组进行排序并去重，然后append到首页
-function tagname(){
-	$.each(database,function(index,tags){
-		tag.push(tags['label']);
+function tagname() {
+	$.each(database, function(index, tags) {
+		//		判断标签中是否含有数组
+		if($.isArray(tags['label'])) {
+			for(var i = 0; i < tags['label'].length; i++) {
+				tag.push(tags['label'][i]);
+			}
+		} else {
+			tag.push(tags['label']);
+		}
 	});
-	$.unique(tag.sort()); 
-	for(var i=0;i<tag.length;i++){
-	var label='<li><a href="#">'+tag[i]+'</a></li>';	
-	$('.label-ul').append(label);
+	$.unique(tag.sort());
+	for(var i = 0; i < tag.length; i++) {
+		var label = '<li><a href="#">' + tag[i] + '</a></li>';
+		$('.label-ul').append(label);
 	};
 };
-
 
 //响应式-小屏状态下的菜单按钮动作
 $('.menu').click(function() {
 	$('.menu').css('right', '-100%');
-	$('.menu-ul').css('right','-150px');
+	$('.menu-ul').css('right', '-150px');
 });
 
 function menu() {
 	$('.menu').css('right', '0');
-	$('.menu-ul').css('right','0');
+	$('.menu-ul').css('right', '0');
 };
 
 //主页中显示更多和隐藏的动作
@@ -75,36 +78,36 @@ function hide(e) {
 };
 
 //nav点击事件
-function active(e){
+function active(e) {
 	$('.active').removeClass('active');
 	$(e).addClass('active');
-	var txt=$(e).text();
-	switch(txt){
+	var txt = $(e).text();
+	switch(txt) {
 		case('首页'):
-		break;
+			break;
 		case('时间轴'):
-		timeline();
-		break;
+			timeline();
+			break;
 		case('标签'):
-		label();
-		break;
+			label();
+			break;
 		case('项目'):
-		project();
-		break;
+			project();
+			break;
 		case('关于我'):
-		about();
-		break;
+			about();
+			break;
 	}
 };
 
-function timeline(){
+function timeline() {
 	$('.left').text('');
-	var article="<div class='article'></div>";
+	var article = "<div class='article'></div>";
 	$('.left').append(article);
-	var ul="<ul class='timeline-ul'></ul>";
+	var ul = "<ul class='timeline-ul'></ul>";
 	$('.article').append(ul);
 	$.each(database, function(index, info) {
-				var content ='<li>'+info['date']+'<a>'+info['title']+'</a><span>'+info['label']+'</span></li>';
-				$('.timeline-ul').append(content);
-			});
+		var content = '<li>' + info['date'] + '<a>' + info['title'] + '</a><span>' + info['label'] + '</span></li>';
+		$('.timeline-ul').append(content);
+	});
 }

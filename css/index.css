@@ -150,6 +150,7 @@ a {
 
 .article {
 	padding: 20px 0;
+	margin: 0 auto;
 }
 
 .title a {
@@ -170,7 +171,10 @@ a {
 
 .tag {
 	display: inline-block;
-	padding: 0 10px;
+	margin: 0 10px;
+	padding: 5px;
+	background: #eee;
+	border-radius: 6px;
 }
 
 .txt {
@@ -201,22 +205,26 @@ a {
 .timeline-ul
 {
 	padding: 0 20px;
+	width: 100%;
 }
 
 .timeline-ul li
 {
 	margin: 10px 20px;
+	line-height: 1.8em;
 	font-size: 1.8em;
-	width: 100%;
 }
 
 .timeline-ul li a
 {
-	margin: 0 10px;
+	margin: 0 20px;
 }
 
 .timeline-ul li span{
 	color: #82B440;
+	background: #eee;
+	padding: 5px;
+	border-radius: 6px;
 }
 
 .right {
