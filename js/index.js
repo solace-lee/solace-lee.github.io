@@ -15,7 +15,7 @@ function main() {
 		if(database.length < 5) {
 			//如果Jason中的数据少于5条则遍历数据并append到left中
 			$.each(database, function(index, info) {
-				var article = '<div class="article"><div class="title"><a href="'+info[code_link]+'">' + info['title'] + '</a></div><div class="info"><div class="time">' + info['date'] + '</div><div class="tag">' + info['label'] + '</div></div><div class="txt">' + info['content'] + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
+				var article = '<div class="article"><div class="title"><a onclick="mainbody(this)" >' + info['title'] + '</a></div><div class="info"><div class="time">' + info['date'] + '</div><div class="tag">' + info['label'] + '</div></div><div class="txt">' + info['content'] + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
 				var recent = '<li><a href="#">' + info['title'] + '</a></li>';
 				$left.append(article);
 				$('.recent-title').find('ul').append(recent);
@@ -23,10 +23,10 @@ function main() {
 		} else {
 			//如果Jason中的数据大于5条则取最前的5条数据append到left中
 			for(var i = 0; i < 5; i++) {
-				var limit = '<div class="article"><div class="title"><a href="'+database[i].code_link+'">' + database[i].title + '</a></div><div class="info"><div class="time">' + database[i].date + '</div><div class="tag">'+database[i].label + '</div></div><div class="txt">' + database[i].content + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
+				var limit = '<div class="article"><div class="title"><a onclick="mainbody(this)" >' + database[i].title + '</a></div><div class="info"><div class="time">' + database[i].date + '</div><div class="tag">'+database[i].label + '</div></div><div class="txt">' + database[i].content + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
 				$left.append(limit);
 				//同时将标题也追加到右侧最近更新中去
-				var limitrecent = '<li><a href="#">' + database[i].title + '</a></li>';	
+				var limitrecent = '<li><a onclick="mainbody(this)" href="#">' + database[i].title + '</a></li>';	
 				$('.recent-ul').append(limitrecent);
 			}
 		}
@@ -90,7 +90,8 @@ function active(e) {
 			timeline();
 			break;
 		case('标签'):
-			label();
+			var a;
+			label(a);
 			break;
 		case('项目'):
 			project();
@@ -109,9 +110,11 @@ function timeline() {
 	var ul = "<ul class='timeline-ul'></ul>";
 	$('.article').append(ul);
 	$.each(database, function(index, info) {
-		var content = '<li>' + info['date'] + '<a>' + info['title'] + '</a><span>' + info['label'] + '</span></li>';
+		var content = '<li>' + info['date'] + '<a onclick="mainbody(this)">' + info['title'] + '</a><div class="tag">' + info['label'] + '</li>';
 		$('.timeline-ul').append(content);
 	});
+	//批量修改时间轴中主体的标签
+	tagChange();
 };
 
 
@@ -131,8 +134,42 @@ function tagChange(){
 
 };
 
-
+//标签页事件
 function label(e) {
+	//如果点击的按钮length值为0，则为点击到菜单栏中的标签
+	if($(e).length==0){
+	$('.left').text('');
+	
+	
+	}
+	//否则为点击到博客中的标签，把标签内容传入为后续加工做准备
+	else{
+	$('.active').removeClass('active');
+	$('.label-nav').addClass('active');
+	var txt=$(e).text();
+	
+	}
 	$('.left').text('');
 	console.log($(e).text());
+};
+
+
+//正文事件
+function mainbody(e){
+	//清除菜单中的选中效果
+	$('.active').removeClass('active');
+	var txt=$(e).text();
+	//搜索Jason数据中和点击的文本相同的标题，并获取到下标位置
+	$.each(database, function(index,info) {
+		if(info['title']==txt){
+			$('.left').text('');
+			var body = '<div class="bodyarticle"><div class="bodytitle"><a onclick="mainbody(this)" href="'+info['code_link']+'">' + info['title'] + '</a></div><div class="bodyinfo"><div class="time">' + info['date'] + '</div><div class="tag">' + info['label'] + '</div></div><div class="bodytxt">' + info['content'] + '</div></div>';
+			$('.left').append(body);
+			tagChange();
+//			console.log(info['title']+index);
+		}
+	});
+	//清空主体内容展示区
+	
+	
 };

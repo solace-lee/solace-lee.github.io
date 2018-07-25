@@ -153,20 +153,39 @@ a {
 	margin: 0 auto;
 }
 
+.bodyarticle {
+	padding: 20px 0;
+	margin: 0 auto;
+}
+
 .title a {
 	color: #82b440;
 	font-size: 2em;
 	padding: 10px 0;
 }
 
+.bodytitle a {
+	color: #82b440;
+	font-size: 2.2em;
+	font-weight: bold;
+	padding: 10px 0;
+}
+
 .info {
 	display: ;
-	font-size: 1.4em;
+	font-size: 1.6em;
+	padding: 10px 0;
+}
+
+.bodyinfo {
+	display: ;
+	font-size: 1.6em;
 	padding: 10px 0;
 }
 
 .time {
 	display: inline-block;
+	margin: 0 5px;
 }
 
 .tag {
@@ -188,6 +207,16 @@ a {
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
 	-webkit-box-orient: vertical;
+}
+
+.bodytxt {
+	font-size: 1.6em;
+	line-height: 1.8em;
+	/*overflow: hidden;*/
+	/*text-overflow: ellipsis;*/
+	display: block;
+	/*-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;*/
 }
 
 .more {
