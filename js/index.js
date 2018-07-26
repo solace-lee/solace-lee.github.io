@@ -199,7 +199,7 @@ function tagbody() {
 	tagChange();
 };
 
-//博客正文事件
+//博客正文事件，传入点击的文本
 function mainbody(e) {
 	//清除菜单中的选中效果
 	$('.active').removeClass('active');

@@ -191,6 +191,7 @@ a {
 
 .time {
 	display: inline-block;
+	color: #bbb;
 	margin: 0 5px;
 }
 
