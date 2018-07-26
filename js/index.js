@@ -153,12 +153,10 @@ function label(e) {
 	for(var k=0;k<$('.tagtitle').length;k++){
 		var n=$('.tagtitle')[k];
 		if($(n).text()==txt){
-			var b=$(n);
-			var left=$('.left');
-			console.log(b.offset().top);
-			b.animate({
-				scrollTop:b.offset().top-left.offset().top+left.scrollTop()
-			},1500);
+//			console.log(left.scrollTop());
+			$('body').animate({
+				scrollTop:$(n).offset().top-$('.left').offset().top
+			},800);
 		}
 	}
 //	console.log($('.tagtitle').length);
