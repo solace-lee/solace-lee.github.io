@@ -85,6 +85,10 @@ function active(e) {
 	var txt = $(e).text();
 	switch(txt) {
 		case('首页'):
+			$('.left').text('');
+			$('.recent-ul').text('');
+			$('.label-ul').text('');
+			main();
 			break;
 		case('时间轴'):
 			timeline();
