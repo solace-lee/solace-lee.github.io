@@ -115,6 +115,9 @@ function timeline() {
 	});
 	//批量修改时间轴中主体的标签
 	tagChange();
+	$('body').animate({
+		scrollTop:0
+	},500);
 };
 
 
@@ -153,16 +156,14 @@ function label(e) {
 	for(var k=0;k<$('.tagtitle').length;k++){
 		var n=$('.tagtitle')[k];
 		if($(n).text()==txt){
-//			console.log(left.scrollTop());
+//			console.log($('.left').offset().top);
+//			console.log($(n).offset().top);
 			$('body').animate({
 				scrollTop:$(n).offset().top-$('.left').offset().top
 			},800);
 		}
 	}
-//	console.log($('.tagtitle').length);
-	
 	}
-//	console.log($(e).text());
 };
 
 
@@ -203,7 +204,7 @@ function mainbody(e){
 //			console.log(info['title']+index);
 		}
 	});
-
-	
-	
+	$('body').animate({
+		scrollTop:0
+	},500);
 };
