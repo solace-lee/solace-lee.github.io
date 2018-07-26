@@ -151,7 +151,6 @@ function label(e) {
 	tagbody();
 	//清空内容区域后生成标签正文，下面该开始做滚动定位事件
 	for(var k=0;k<$('.tagtitle').length;k++){
-		console.log($('.tagtitle')[k]);
 		var n=$('.tagtitle')[k];
 		if($(n).text()==txt){
 			var b=$(n);
