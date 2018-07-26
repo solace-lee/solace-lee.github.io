@@ -24,6 +24,7 @@ a:hover {
 	background: #fff;
 	height: 100%;
 	font-size: 12px;
+	font-family: "微软雅黑";
 	/*width: 100%;*/
 	min-width: 300px;
 }
@@ -365,22 +366,24 @@ footer .copy {
 		position: fixed;
 		top: 40px;
 		right: -100%;
-		transform:translateY(-100%) ;
-		transition: all 500ms;
+		transition: right 500ms;
+		-webkit-transition: right 500ms;
 		width: 100%;
 		height: 100%;
 		background: rgba(0, 0, 0, 0.4);
 		text-align: center;
+		z-index: 100;
 		/*display: none;*/
 	}
 	.normal-nav .menu ul {
 		position: fixed;
 		right: -150px;
-		transform:translateY(-150px) ;
-		transition: all 500ms;
+		transition: right 500ms;
+		-webkit-transition: right 500ms;
 		width: 150px;
 		height: 100%;
 		background: #fff;
+		z-index: 100;
 	}
 	.normal-nav .menu ul li {
 		display: block;
