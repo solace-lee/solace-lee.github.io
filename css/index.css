@@ -158,6 +158,11 @@ a {
 	margin: 0 auto;
 }
 
+.tagtitle {
+	font-size: 2em;
+	font-weight: bold;
+}
+
 .title a {
 	color: #82b440;
 	font-size: 2em;

@@ -134,27 +134,63 @@ function tagChange(){
 
 };
 
-//标签页事件
+//点击标签事件
 function label(e) {
+	$('.left').text('');
 	//如果点击的按钮length值为0，则为点击到菜单栏中的标签
 	if($(e).length==0){
-	$('.left').text('');
-	
-	
+	//调用标签主体内容生成方法
+	tagbody();
 	}
 	//否则为点击到博客中的标签，把标签内容传入为后续加工做准备
 	else{
 	$('.active').removeClass('active');
 	$('.label-nav').addClass('active');
 	var txt=$(e).text();
+	$('.left').text('');
+	tagbody();
+	//清空内容区域后生成标签正文，下面该开始做滚动定位事件
+	for(var k=0;k<$('.tagtitle').length;k++){
+		console.log($('.tagtitle')[k]);
+		var n=$('.tagtitle')[k];
+		if($(n).text()==txt){
+			var b=$(n);
+			var left=$('.left');
+			console.log(b.offset().top);
+			b.animate({
+				scrollTop:b.offset().top-left.offset().top+left.scrollTop()
+			},1500);
+		}
+	}
+//	console.log($('.tagtitle').length);
 	
 	}
-	$('.left').text('');
-	console.log($(e).text());
+//	console.log($(e).text());
 };
 
 
-//正文事件
+
+//标签页主体内容生成方法
+function tagbody(){
+	for(var i=0;i<tag.length;i++){
+		var box='<div class="article"><div class="tagtitle">'+tag[i]+'</div><ul class="timeline-ul"></ul></div>';
+		$('.left').append(box);
+		$.each(database, function(index,info) {
+			for(var j=0;j<info['label'].length;j++){
+				if(info['label'][j]==tag[i]){
+					var txt='<li>' + info['date'] + '<a onclick="mainbody(this)">' + info['title'] + '</a><div class="tag">' + info['label'] + '</li>';;
+					 var a=$('.timeline-ul')[$('.timeline-ul').length-1];
+					$(a).append(txt);
+				}
+			}
+		});
+	}
+	tagChange();
+};
+
+
+
+//博客正文事件
 function mainbody(e){
 	//清除菜单中的选中效果
 	$('.active').removeClass('active');
@@ -162,6 +198,7 @@ function mainbody(e){
 	//搜索Jason数据中和点击的文本相同的标题，并获取到下标位置
 	$.each(database, function(index,info) {
 		if(info['title']==txt){
+			//清空主体内容展示区
 			$('.left').text('');
 			var body = '<div class="bodyarticle"><div class="bodytitle"><a onclick="mainbody(this)" href="'+info['code_link']+'">' + info['title'] + '</a></div><div class="bodyinfo"><div class="time">' + info['date'] + '</div><div class="tag">' + info['label'] + '</div></div><div class="bodytxt">' + info['content'] + '</div></div>';
 			$('.left').append(body);
@@ -169,7 +206,7 @@ function mainbody(e){
 //			console.log(info['title']+index);
 		}
 	});
-	//清空主体内容展示区
+
 	
 	
 };
