@@ -1,7 +1,7 @@
-* {
+/** {
 	padding: 0;
 	margin: 0;
-}
+}*/
 
 a {
 	text-decoration: none;
@@ -69,6 +69,7 @@ header {
 }
 
 .normal-nav .logo a {
+	margin: 0;
 	color: #82b440;
 	font-size: 1.8em;
 	padding: 0 20px;
@@ -76,8 +77,12 @@ header {
 }
 
 .logo p {
+	position: absolute;
+	left: 180px;
+	top: 0px;
+	margin: 0;
+	padding: 0;
 	float: right;
-	height: 40px;
 	line-height: 50px;
 	font-size: 0.9em;
 	color: #333;
@@ -89,6 +94,11 @@ header {
 
 .normal-nav .menu {
 	float: right;
+}
+
+.menu-ul{
+	margin: 0;
+	padding: 0;
 }
 
 .normal-nav .menu ul li {
@@ -136,12 +146,13 @@ header {
 	padding: 20px;
 	border-radius: 10px;
 	box-shadow: 1px 1px 6px #82b440;
+	font-size: 1.4em;
 }
 
 #welcome {
 	padding: 20px 0;
 	border-bottom: 1px solid #ccc;
-	font-size: 1.5em;
+	font-size: 1em;
 }
 
 #welcome h1,
@@ -160,32 +171,32 @@ a {
 }
 
 .tagtitle {
-	font-size: 2em;
+	font-size: 1.4em;
 	font-weight: bold;
 }
 
 .title a {
 	color: #82b440;
-	font-size: 2em;
+	font-size: 1.4em;
 	padding: 10px 0;
 }
 
 .bodytitle a {
 	color: #82b440;
-	font-size: 2.2em;
+	font-size: 1.4em;
 	font-weight: bold;
 	padding: 10px 0;
 }
 
 .info {
 	display: ;
-	font-size: 1.6em;
+	font-size: 1em;
 	padding: 10px 0;
 }
 
 .bodyinfo {
 	display: ;
-	font-size: 1.6em;
+	font-size: 1em;
 	padding: 10px 0;
 }
 
@@ -204,10 +215,11 @@ a {
 	margin: 0 5px;
 	background: #eee;
 	border-radius: 6px;
+	font-size: 0.8em;
 }
 
 .txt {
-	font-size: 1.6em;
+	font-size: 0.9em;
 	line-height: 1.6em;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -217,8 +229,8 @@ a {
 }
 
 .bodytxt {
-	font-size: 1.6em;
-	line-height: 1.8em;
+	font-size: 0.9em;
+	line-height: 1.6em;
 	/*overflow: hidden;*/
 	/*text-overflow: ellipsis;*/
 	display: block;
@@ -227,14 +239,14 @@ a {
 }
 
 .more {
-	font-size: 1.4em;
+	font-size: 0.8em;
 	padding: 10px;
 	float: right;
 	color: #82B440;
 }
 
 .hide {
-	font-size: 1.4em;
+	font-size: 0.8em;
 	padding: 10px;
 	float: right;
 	color: #82B440;
@@ -248,8 +260,8 @@ a {
 
 .timeline-ul li {
 	margin: 10px 20px;
-	line-height: 1.8em;
-	font-size: 1.8em;
+	line-height: 1.6em;
+	font-size: 1em;
 }
 
 .timeline-ul li a {
@@ -261,6 +273,7 @@ a {
 	background: #eee;
 	padding: 5px;
 	border-radius: 6px;
+	font-size: 0.8em;
 }
 
 .right {
@@ -279,6 +292,12 @@ a {
 	box-shadow: 1px 1px 6px #82b440;
 	padding: 20px;
 	margin-bottom: 20px;
+}
+
+.recent-ul,.label-ul
+{
+	margin: 0;
+	padding: 0;
 }
 
 .recent-title {

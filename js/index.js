@@ -126,10 +126,7 @@ function timeline() {
 	});
 	//批量修改时间轴中主体的标签
 	tagChange();
-	//避免标签页中，页面滚动到底部，所以需要回滚到顶部
-	$('body').animate({
-		scrollTop: 0
-	}, 500);
+	backToTop();
 };
 
 //搜索.tag将字符串tag转化为独立切带有span标签的标签,为方便后面坐标签的点击动作
@@ -215,13 +212,22 @@ function mainbody(e) {
 			//			console.log(info['title']+index);
 		}
 	});
-	//避免标签页中，页面滚动到底部，所以需要回滚到顶部
+	backToTop();
+};
+
+//避免标签页中，页面滚动到底部，所以需要回滚到顶部
+function backToTop(){
 	$('body').animate({
 		scrollTop: 0
 	}, 500);
 };
 
-//项目事件
-function project() {
-
+//关于我事件
+function about() {
+	$('.left').text('');
+	$.get('README.md',function(info,status,xhr){
+		$('.left').html(marked(info));
+		console.log(status);
+	})
+backToTop();
 };
