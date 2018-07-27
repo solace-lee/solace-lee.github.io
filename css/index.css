@@ -358,6 +358,7 @@ footer .copy {
 	.main-img {
 		font-size: 8px;
 	}
+
 	.normal-nav {
 		padding: 0 10px;
 	}
@@ -426,6 +427,12 @@ footer .copy {
 	.normal-nav .menu ul li a:hover {
 		border-radius: 6px;
 	}
+	
+		
+	.left{
+		font-size: 1.6em;
+	}
+	
 	.right {
 		display: none;
 	}
