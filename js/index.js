@@ -11,7 +11,13 @@ $(window).load(function() {
 	$.getJSON("jason/database.json", function(data) {
 		database = data;
 		main(database);
-	})
+	});
+	//更改小屏模式下内容区域宽度,避免溢出影响体验
+	var w=$(document.body).width();
+	if(w<700){
+		$('.left').css('width',w-54+'px');
+	}
+
 
 });
 
