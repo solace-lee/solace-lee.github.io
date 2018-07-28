@@ -181,7 +181,7 @@ a {
 	padding: 10px 0;
 }
 
-.bodytitle a {
+.bodytitle {
 	color: #82b440;
 	font-size: 1.4em;
 	font-weight: bold;
@@ -219,8 +219,8 @@ a {
 }
 
 .txt {
-	font-size: 0.9em;
-	line-height: 1.6em;
+	/*font-size: 0.9em;
+	line-height: 1.6em;*/
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
@@ -229,13 +229,9 @@ a {
 }
 
 .bodytxt {
-	font-size: 0.9em;
-	line-height: 1.6em;
-	/*overflow: hidden;*/
-	/*text-overflow: ellipsis;*/
+	/*font-size: 0.9em;
+	line-height: 1.6em;*/
 	display: block;
-	/*-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;*/
 }
 
 .more {

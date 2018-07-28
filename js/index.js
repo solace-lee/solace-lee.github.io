@@ -2,6 +2,9 @@
 var database = {};
 //声明一个全局数组存取标签
 var tag = [];
+//声明一个变量用来储存MD路径内容
+var　md;
+
 
 $(window).load(function() {
 	//通过Ajax获取Jason数据并保存到一个全局变量中
@@ -18,6 +21,8 @@ function main(database) {
 	if(database.length < 5) {
 		//如果Jason中的数据少于5条则遍历数据并append到left中
 		$.each(database, function(index, info) {
+			var md=index['code_link'];
+			console.log(md);
 			var article = '<div class="article"><div class="title"><a onclick="mainbody(this)" >' + info['title'] + '</a></div><div class="info"><div class="time">' + info['date'] + '</div><div class="tag">' + info['label'] + '</div></div><div class="txt">' + info['content'] + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
 			var recent = '<li><a href="#">' + info['title'] + '</a></li>';
 			$left.append(article);
@@ -25,19 +30,37 @@ function main(database) {
 		});
 	} else {
 		//如果Jason中的数据大于5条则取最前的5条数据append到left中
-		for(var i = 0; i < 5; i++) {
-			var limit = '<div class="article"><div class="title"><a onclick="mainbody(this)" >' + database[i].title + '</a></div><div class="info"><div class="time">' + database[i].date + '</div><div class="tag">' + database[i].label + '</div></div><div class="txt">' + database[i].content + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
+		for(var i = 0; i < 8; i++) {
+			var limit = '<div class="article"><div class="title"><a onclick="mainbody(this)" >' + database[i].title + '</a></div><div class="info"><div class="time">' + database[i].date + '</div><div class="tag">' + database[i].label + '</div></div><div class="txt">'+ database[i].code_link +'</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
 			$left.append(limit);
 			//同时将标题也追加到右侧最近更新中去
 			var limitrecent = '<li><a onclick="mainbody(this)" href="#">' + database[i].title + '</a></li>';
 			$('.recent-ul').append(limitrecent);
 		}
 	}
+	//加载博客正文
+	mdtxt();
 	//调用生成标签方法
 	tagname();
 	//调用标签批量改名方法
 	tagChange();
 };
+
+//加载博客内容
+function mdtxt(){
+	for(var i=0;i<$('.txt').length;i++){
+		var md=$('.txt')[i].innerText;
+		var links=$('.txt');
+		var $a=$(links[i]);
+		setTimeout((function(i){
+			$.get(md,function(info){	
+			$(links[i]).html(marked(info));
+//			console.log(i);
+		})
+		})(i),0)
+	}
+};
+
 
 //获取Jason数据流中的标签名,并把存储标签名的数组进行排序并去重，然后append到首页
 function tagname() {
@@ -206,12 +229,13 @@ function mainbody(e) {
 		if(info['title'] == txt) {
 			//清空主体内容展示区
 			$('.left').text('');
-			var body = '<div class="bodyarticle"><div class="bodytitle"><a onclick="mainbody(this)" href="' + info['code_link'] + '">' + info['title'] + '</a></div><div class="bodyinfo"><div class="time">' + info['date'] + '</div><div class="tag">' + info['label'] + '</div></div><div class="bodytxt">' + info['content'] + '</div></div>';
+			var body = '<div class="bodyarticle"><div class="bodytitle">' + info['title'] + '</div><div class="bodyinfo"><div class="time">' + info['date'] + '</div><div class="tag">' + info['label'] + '</div></div><div class="txt bodytxt">' + info['code_link'] + '</div></div>';
 			$('.left').append(body);
 			tagChange();
 			//			console.log(info['title']+index);
 		}
 	});
+	mdtxt();
 	backToTop();
 };
 
@@ -227,7 +251,7 @@ function about() {
 	$('.left').text('');
 	$.get('README.md',function(info,status,xhr){
 		$('.left').html(marked(info));
-		console.log(status);
+//		console.log(xhr.length);
 	})
 backToTop();
 };
