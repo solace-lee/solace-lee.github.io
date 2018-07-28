@@ -13,7 +13,7 @@ $(window).load(function() {
 		main(database);
 	})
 
-})
+});
 
 //加载首页主数据和最近更新的数据
 function main(database) {
