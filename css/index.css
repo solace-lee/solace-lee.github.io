@@ -150,7 +150,7 @@ header {
 }
 
 #welcome {
-	padding: 20px 0;
+	padding-bottom: 10px;
 	border-bottom: 1px solid #ccc;
 	font-size: 1em;
 }

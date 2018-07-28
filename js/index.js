@@ -38,7 +38,7 @@ function main(database) {
 			$('.recent-ul').append(limitrecent);
 		}
 	}
-	//加载博客正文
+	//重加载博客正文
 	mdtxt();
 	//调用生成标签方法
 	tagname();
@@ -114,9 +114,9 @@ function active(e) {
 	var txt = $(e).text();
 	switch(txt) {
 		case('首页'):
-			$('.left').text('');
-			$('.recent-ul').text('');
-			$('.label-ul').text('');
+			$('.left').empty();
+			$('.recent-ul').empty();
+			$('.label-ul').empty();
 			main(database);
 			break;
 		case('时间轴'):
@@ -137,7 +137,7 @@ function active(e) {
 
 //时间轴点击事件,加工.left中的数据
 function timeline() {
-	$('.left').text('');
+	$('.left').empty();
 	var article = "<div class='article'></div>";
 	$('.left').append(article);
 	var ul = "<ul class='timeline-ul'></ul>";
@@ -160,7 +160,7 @@ function tagChange() {
 	for(var i = 0; i < tags.length; i++) {
 		var str = tags[i].innerHTML;
 		var arr = str.split(',');
-		$(tags[i]).text('');
+		$(tags[i]).empty();
 		//切割后的数组经行单独包装，添加点击事件并替换到原来的位置
 		for(var j = 0; j < arr.length; j++) {
 			var span = '<span onclick="label(this)">' + arr[j] + '</span>';
@@ -173,7 +173,7 @@ function tagChange() {
 
 //点击标签事件
 function label(e) {
-	$('.left').text('');
+	$('.left').empty();
 	//如果点击的按钮length值为0，则为点击到菜单栏中的标签
 	if($(e).length == 0) {
 		//调用标签主体内容生成方法
@@ -184,7 +184,7 @@ function label(e) {
 		$('.active').removeClass('active');
 		$('.label-nav').addClass('active');
 		var txt = $(e).text();
-		$('.left').text('');
+		$('.left').empty();
 		tagbody();
 		//清空内容区域后生成标签正文，下面该开始做滚动定位事件
 		for(var k = 0; k < $('.tagtitle').length; k++) {
@@ -248,10 +248,19 @@ function backToTop(){
 
 //关于我事件
 function about() {
-	$('.left').text('');
+	$('.left').empty();
 	$.get('README.md',function(info,status,xhr){
 		$('.left').html(marked(info));
 //		console.log(xhr.length);
 	})
 backToTop();
+};
+
+//项目事件
+function project(){
+	$('.left').empty();
+	$.get('project.md',function(info,s,x){
+		$('.left').html(marked(info));
+	})
+	backToTop();
 };
