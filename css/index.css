@@ -232,7 +232,8 @@ a {
 .bodytxt {
 	/*font-size: 0.9em;
 	line-height: 1.6em;*/
-	display: block;
+	/*display: block;*/
+	height: auto;
 }
 
 .more {
