@@ -3,8 +3,7 @@ var database = {};
 //声明一个全局数组存取标签
 var tag = [];
 //声明一个变量用来储存MD路径内容
-var　md;
-
+var　 md;
 
 $(window).load(function() {
 	//通过Ajax获取Jason数据并保存到一个全局变量中
@@ -13,21 +12,22 @@ $(window).load(function() {
 		main(database);
 	});
 	//更改小屏模式下内容区域宽度,避免溢出影响体验
-	var w=$(document.body).width();
-	if(w<700){
-		$('.left').css('width',w-54+'px');
+	var w = $(document.body).width();
+	if(w < 700) {
+		$('.left').css('width', w - 50 + 'px');
 	}
-
 
 });
 
 //加载首页主数据和最近更新的数据
 function main(database) {
 	var $left = $('.left');
+	var welcome = '<div id="welcome"><h1>欢迎来到我的博客</h1><p>查看我的代码库请访问：<a href="https://github.com/solace-lee">https://github.com/solace-lee</a></p></div>'
+	$left.append(welcome);
 	if(database.length < 5) {
 		//如果Jason中的数据少于5条则遍历数据并append到left中
 		$.each(database, function(index, info) {
-			var md=index['code_link'];
+			var md = index['code_link'];
 			console.log(md);
 			var article = '<div class="article"><div class="title"><a onclick="mainbody(this)" >' + info['title'] + '</a></div><div class="info"><div class="time">' + info['date'] + '</div><div class="tag">' + info['label'] + '</div></div><div class="txt">' + info['content'] + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
 			var recent = '<li><a href="#">' + info['title'] + '</a></li>';
@@ -37,7 +37,7 @@ function main(database) {
 	} else {
 		//如果Jason中的数据大于5条则取最前的5条数据append到left中
 		for(var i = 0; i < 8; i++) {
-			var limit = '<div class="article"><div class="title"><a onclick="mainbody(this)" >' + database[i].title + '</a></div><div class="info"><div class="time">' + database[i].date + '</div><div class="tag">' + database[i].label + '</div></div><div class="txt">'+ database[i].code_link +'</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
+			var limit = '<div class="article"><div class="title"><a onclick="mainbody(this)" >' + database[i].title + '</a></div><div class="info"><div class="time">' + database[i].date + '</div><div class="tag">' + database[i].label + '</div></div><div class="txt">' + database[i].code_link + '</div><div class="more" onclick="more(this)">MORE ></div><div class="hide" onclick="hide(this)">HIDE ></div></div>';
 			$left.append(limit);
 			//同时将标题也追加到右侧最近更新中去
 			var limitrecent = '<li><a onclick="mainbody(this)" href="#">' + database[i].title + '</a></li>';
@@ -53,20 +53,19 @@ function main(database) {
 };
 
 //加载博客内容
-function mdtxt(){
-	for(var i=0;i<$('.txt').length;i++){
-		var md=$('.txt')[i].innerText;
-		var links=$('.txt');
-		var $a=$(links[i]);
-		setTimeout((function(i){
-			$.get(md,function(info){	
-			$(links[i]).html(marked(info));
-//			console.log(i);
-		})
-		})(i),0)
+function mdtxt() {
+	for(var i = 0; i < $('.txt').length; i++) {
+		var md = $('.txt')[i].innerText;
+		var links = $('.txt');
+		var $a = $(links[i]);
+		setTimeout((function(i) {
+			$.get(md, function(info) {
+				$(links[i]).html(marked(info));
+				//			console.log(i);
+			})
+		})(i), 0)
 	}
 };
-
 
 //获取Jason数据流中的标签名,并把存储标签名的数组进行排序并去重，然后append到首页
 function tagname() {
@@ -102,13 +101,16 @@ function menu() {
 //主页中显示更多和隐藏的动作
 function more(e) {
 	e.style.display = "none";
-	$(e).parent().find('.txt').css('-webkit-line-clamp', '10');
+	$(e).parent().find('.txt').css({
+		'height': 'auto',
+		'max-height': '350px'
+	});
 	$(e).parent().find('.hide').css('display', 'block');
 };
 
 function hide(e) {
 	e.style.display = "none";
-	$(e).parent().find('.txt').css('-webkit-line-clamp', '3');
+	$(e).parent().find('.txt').css('height', '120px');
 	$(e).parent().find('.more').css('display', 'block')
 };
 
@@ -246,7 +248,7 @@ function mainbody(e) {
 };
 
 //避免标签页中，页面滚动到底部，所以需要回滚到顶部
-function backToTop(){
+function backToTop() {
 	$('body').animate({
 		scrollTop: 0
 	}, 500);
@@ -255,17 +257,17 @@ function backToTop(){
 //关于我事件
 function about() {
 	$('.left').empty();
-	$.get('README.md',function(info,status,xhr){
+	$.get('README.md', function(info, status, xhr) {
 		$('.left').html(marked(info));
-//		console.log(xhr.length);
+		//		console.log(xhr.length);
 	})
-backToTop();
+	backToTop();
 };
 
 //项目事件
-function project(){
+function project() {
 	$('.left').empty();
-	$.get('project.md',function(info,s,x){
+	$.get('project.md', function(info, s, x) {
 		$('.left').html(marked(info));
 	})
 	backToTop();

@@ -222,10 +222,11 @@ a {
 	/*font-size: 0.9em;
 	line-height: 1.6em;*/
 	overflow: hidden;
-	text-overflow: ellipsis;
+	height: 80px;
+	/*text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
-	-webkit-box-orient: vertical;
+	-webkit-box-orient: vertical;*/
 }
 
 .bodytxt {
