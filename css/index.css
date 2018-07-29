@@ -19,9 +19,10 @@ a:hover {
 
 .main-img {
 	position: absolute;
+	
 	left: 0;
 	top: 0;
-	background: #fff;
+	/*background: #fff;*/
 	height: 100%;
 	font-size: 12px;
 	font-family: "微软雅黑";
@@ -29,12 +30,20 @@ a:hover {
 	min-width: 300px;
 }
 
-.main-bg {}
+.main-bg {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
 
 .main-bg img {
 	position: fixed;
+	/*background: center no-repeat;*/
+	background-size: 100%;
+	width: 100%;
+	height: 100%;
 	/*left: 0;*/
-	top: 50px;
+	/*top: 42px;*/
 }
 
 
@@ -42,7 +51,7 @@ a:hover {
 
 header {
 	position: fixed;
-	background: #FFF;
+	background: rgba(255,255,255,0.8);
 	/*border-bottom: 1px solid #333;*/
 	top: 0;
 	width: 100%;
@@ -51,6 +60,7 @@ header {
 	height: 40px;
 	max-width: 1600px;
 	font-size: 1.3em;
+	box-shadow: 1px 1px 5px #82b440;
 }
 
 
@@ -60,8 +70,8 @@ header {
 	height: 40px;
 	/*overflow: hidden;*/
 	padding: 0 50px;
-	border: 1px solid #fff;
-	box-shadow: 1px 1px 5px #82b440;
+	/*border: 1px solid #fff;*/
+	
 }
 
 .normal-nav .logo {
