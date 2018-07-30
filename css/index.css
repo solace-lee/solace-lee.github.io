@@ -21,20 +21,15 @@ a:hover {
 	position: absolute;
 	left: 0;
 	top: 0;
-	/*background: #a15980;*/
-	height: 100%;
 	font-size: 12px;
 	font-family: "微软雅黑";
-	/*overflow: hidden;*/
-	/*width: 100%;*/
+	overflow: hidden;
+	width: 100%;
 	min-width: 300px;
 }
 
 .main-bg {
-	display: inline-block;
-	width: 100%;
-	/*max-width: 1920px;*/
-	height: 100%;
+
 }
 
 .main-bg img {
@@ -142,10 +137,11 @@ header {
 	position: relative;
 	padding: 0 50px;
 	top: 80px;
-	/*max-width: 1920px;*/
-	/*min-height: 300px;*/
-	display: inline-flex;
-	display: -webkit-inline-flex;
+	left: 0;
+	width: auto;
+	max-width: 1920px;
+	display: flex;
+	display: -webkit-flex;
 	color: #333;
 }
 
@@ -197,40 +193,38 @@ a {
 }
 
 .info {
-	display: ;
 	font-size: 1em;
 	padding: 10px 0;
 }
 
 .bodyinfo {
-	display: ;
 	font-size: 1em;
 	padding: 10px 0;
 }
 
 .time {
-	display: inline-block;
+	display: inline;
 	color: #bbb;
 	margin: 0 5px;
 }
 
 .tag {
-	display: inline-block;
+	display: inline;
 }
 
 .tag span {
 	padding: 5px 10px;
 	margin: 0 5px;
-	background: #eee;
+	background: #e5cfdc;
 	border-radius: 6px;
 	font-size: 0.8em;
 }
 
 .txt {
-	/*font-size: 0.9em;
-	line-height: 1.6em;*/
 	overflow: hidden;
 	height: 80px;
+	/*display: inline;
+	width: 100%;*/
 	/*text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-line-clamp: 3;
@@ -240,8 +234,9 @@ a {
 .bodytxt {
 	/*font-size: 0.9em;
 	line-height: 1.6em;*/
-	/*display: block;*/
+	
 	height: auto;
+	/*width: 100%;*/
 }
 
 .more {
@@ -276,14 +271,14 @@ a {
 
 .timeline-ul li span {
 	color: #534b50;
-	background: #eee;
+	background: #e5cfdc;
 	padding: 5px;
 	border-radius: 6px;
 	font-size: 0.8em;
 }
 
 .right {
-	flex: 1;
+	flex: 1;;
 	margin: 20px;
 	font-size: 1.6em;
 }
@@ -392,7 +387,7 @@ footer .copy {
 		color: #534b50;
 		font-weight: bold;
 		float: right;
-		line-height: 45px;
+		line-height: 44px;
 		padding: 0 46px;
 		font-size: 1.2em;
 	}
@@ -447,10 +442,17 @@ footer .copy {
 		padding: 0px;
 		top: 50px;
 		display: block;
+		/*margin: 0 auto;*/
+		/*width: 100%;*/
 	}
 		
 	.left{
 		font-size: 1.8em;
+		width: auto;
+	}
+	
+	.txt{
+		
 	}
 	
 	.right {
@@ -466,15 +468,7 @@ footer .copy {
 }
 
 @media only screen and (min-width:1920px) {
-	.main-img {
-		width: 1920px;
-		position: absolute;
-		display: block;
-		/*margin: 0 auto;*/
-		left: 50%;
-	}
 	.main-bg {
-		position: relative;
-		left: -50%;
-	}
-}
+		width: 1920px;
+		margin: 0 auto;
+	}
