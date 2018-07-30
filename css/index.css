@@ -438,6 +438,7 @@ footer .copy {
 	.left{
 		font-size: 1.8em;
 		width: auto;
+		overflow: hidden;
 	}
 	
 	.txt{

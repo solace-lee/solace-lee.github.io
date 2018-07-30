@@ -55,11 +55,11 @@ function heighlight(){
       renderer: rendererMD,
       gfm: true,
       tables: true,
-      breaks: false,
+      breaks: true,
       pedantic: false,
       sanitize: false,
       smartLists: true,
-      smartypants: false
+      smartypants: false,
     });
     var markdownString = '```js\n console.log("hello"); \n```';
     marked.setOptions({

@@ -11,25 +11,20 @@
 
 **jQuery库**
 ```
-<script src="https://code.jquery.com/
-jquery-2.1.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 ```
 
 **markdown**
 ```
-<script src="https://cdn.bootcss.com/marked/
-0.4.0/marked.js"></script>
+<script src="https://cdn.bootcss.com/marked/0.4.0/marked.js"></script>
 ```
 
 **code heighlight**
 ```
-<script src="https://cdnjs.cloudflare.com/
-ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 ```
 
 **heighlight样式**
 ```
-<link rel="stylesheet" href="https://cdnjs
-.cloudflare.com/ajax/libs/highlight.js/
-9.12.0/styles/default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
 ```
