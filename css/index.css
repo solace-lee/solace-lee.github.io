@@ -12,20 +12,20 @@ a:hover {
 }
 
 
-/*82b440*/
+/*534b50*/
 
 
 /*主页页面背景图*/
 
 .main-img {
 	position: absolute;
-	
 	left: 0;
 	top: 0;
-	/*background: #fff;*/
+	/*background: #a15980;*/
 	height: 100%;
 	font-size: 12px;
 	font-family: "微软雅黑";
+	/*overflow: hidden;*/
 	/*width: 100%;*/
 	min-width: 300px;
 }
@@ -33,6 +33,7 @@ a:hover {
 .main-bg {
 	display: inline-block;
 	width: 100%;
+	/*max-width: 1920px;*/
 	height: 100%;
 }
 
@@ -42,6 +43,7 @@ a:hover {
 	background-size: 100%;
 	width: 100%;
 	height: 100%;
+	max-width: 1920px;
 	/*left: 0;*/
 	/*top: 42px;*/
 }
@@ -51,23 +53,23 @@ a:hover {
 
 header {
 	position: fixed;
-	background: rgba(255,255,255,0.8);
+	background: #c6c3ca;
 	/*border-bottom: 1px solid #333;*/
 	top: 0;
 	width: 100%;
 	min-width: 300px;
 	z-index: 100;
-	height: 40px;
-	max-width: 1600px;
+	height: 60px;
+	max-width: 1920px;
 	font-size: 1.3em;
-	box-shadow: 1px 1px 5px #82b440;
+	/*box-shadow: 1px 1px 5px #534b50;*/
 }
 
 
 /*宽屏导航栏*/
 
 .normal-nav {
-	height: 40px;
+	height: 60px;
 	/*overflow: hidden;*/
 	padding: 0 50px;
 	/*border: 1px solid #fff;*/
@@ -76,24 +78,25 @@ header {
 
 .normal-nav .logo {
 	float: left;
+	padding: 10px 0;
 }
 
 .normal-nav .logo a {
 	margin: 0;
-	color: #82b440;
+	color: #534b50;
 	font-size: 1.8em;
-	padding: 0 20px;
+	padding: 10px 20px;
 	font-weight: 800;
 }
 
 .logo p {
 	position: absolute;
 	left: 180px;
-	top: 0px;
+	top: 16px;
 	margin: 0;
 	padding: 0;
 	float: right;
-	line-height: 50px;
+	line-height: 40px;
 	font-size: 0.9em;
 	color: #333;
 }
@@ -113,49 +116,44 @@ header {
 
 .normal-nav .menu ul li {
 	display: inline;
-	height: 40px;
+	height: 60px;
 }
 
 .normal-nav .menu ul li a {
 	display: inline-block;
 	height: 40px;
-	width: 50px;
+	width: 60px;
 	text-align: center;
 	line-height: 42px;
 	color: #333;
-	padding: 0 5px;
-	margin: 0 5px;
+	padding: 10px;
+	margin: 0 1px;
 }
 
 .normal-nav .active {
-	background: rgba(130, 180, 64, 0.8);
-	border-radius: 0 0 8px 8px;
-	box-shadow: 0 4px 5px #fff;
+	background: rgba(160, 144, 154, 1);
 }
 
 .normal-nav .menu ul li a:hover {
-	background: rgba(130, 180, 64, 0.6);
-	border-radius: 0 0 8px 8px;
-	box-shadow: 0 4px 5px #fff;
+	background: rgba(229, 207, 220, 1);
 }
 
 .content {
 	position: relative;
 	padding: 0 50px;
-	top: 50px;
-	left: 0;
-	min-height: 300px;
+	top: 80px;
+	/*max-width: 1920px;*/
+	/*min-height: 300px;*/
 	display: inline-flex;
+	display: -webkit-inline-flex;
 	color: #333;
 }
 
 .left {
 	flex: 3;
-	margin: 10px;
-	background: rgba(255, 255, 255, 0.8);
+	margin: 20px;
+	background: #f7f7f7;
 	padding: 20px;
-	border-radius: 10px;
-	box-shadow: 1px 1px 6px #82b440;
 	font-size: 1.4em;
 }
 
@@ -167,7 +165,7 @@ header {
 
 #welcome h1,
 a {
-	color: #82b440;
+	color: #534b50;
 }
 
 .article {
@@ -186,13 +184,13 @@ a {
 }
 
 .title a {
-	color: #82b440;
+	color: #534b50;
 	font-size: 1.4em;
 	padding: 10px 0;
 }
 
 .bodytitle {
-	color: #82b440;
+	color: #534b50;
 	font-size: 1.4em;
 	font-weight: bold;
 	padding: 10px 0;
@@ -250,14 +248,14 @@ a {
 	font-size: 0.8em;
 	padding: 10px;
 	float: right;
-	color: #82B440;
+	color: #534b50;
 }
 
 .hide {
 	font-size: 0.8em;
 	padding: 10px;
 	float: right;
-	color: #82B440;
+	color: #534b50;
 	display: none;
 }
 
@@ -277,7 +275,7 @@ a {
 }
 
 .timeline-ul li span {
-	color: #82B440;
+	color: #534b50;
 	background: #eee;
 	padding: 5px;
 	border-radius: 6px;
@@ -286,18 +284,18 @@ a {
 
 .right {
 	flex: 1;
-	margin: 10px;
+	margin: 20px;
 	font-size: 1.6em;
 }
 
 .right a {
-	color: #82b440;
+	color: #534b50;
 }
 
 .recent {
-	background: rgba(255, 255, 255, 0.8);
-	border-radius: 10px;
-	box-shadow: 1px 1px 6px #82b440;
+	background: #f7f7f7;
+	/*border-radius: 10px;*/
+	/*box-shadow: 1px 1px 6px #534b50;*/
 	padding: 20px;
 	margin-bottom: 20px;
 }
@@ -321,9 +319,9 @@ a {
 
 .label {
 	padding: 20px;
-	background: rgba(255, 255, 255, 0.8);
-	border-radius: 10px;
-	box-shadow: 1px 1px 6px #82b440;
+	background: #f7f7f7;
+	/*border-radius: 10px;*/
+	/*box-shadow: 1px 1px 6px #534b50;*/
 	margin: 20px 0;
 }
 
@@ -381,7 +379,7 @@ footer .copy {
 	}
 	.normal-nav span {
 		display: block;
-		color: #82b440;
+		color: #534b50;
 		font-weight: bold;
 		float: right;
 		line-height: 45px;
@@ -455,9 +453,9 @@ footer .copy {
 	}
 }
 
-@media only screen and (min-width:1600px) {
+@media only screen and (min-width:1920px) {
 	.main-img {
-		width: 1600px;
+		width: 1920px;
 		position: absolute;
 		display: block;
 		/*margin: 0 auto;*/
