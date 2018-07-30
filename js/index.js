@@ -12,10 +12,10 @@ $(window).load(function() {
 		main(database);
 	});
 	//更改小屏模式下内容区域宽度,避免溢出影响体验
-	var w = $(document.body).width();
-	if(w < 700) {
-		$('.left').css('width', w - 50 + 'px');
-	}
+//	var w = $(document.body).width();
+//	if(w < 700) {
+//		$('.left').css('width', w - 50 + 'px');
+//	}
 
 });
 

@@ -8,7 +8,7 @@ a {
 }
 
 a:hover {
-	text-shadow: 1px 1px 2px rgba(130, 180, 64, 0.8);
+	text-shadow: 1px 1px 2px rgba(160, 144, 154, 0.9);
 }
 
 
@@ -341,8 +341,11 @@ footer {
 	top: 40px;
 	color: #333;
 	width: 100%;
-	height: 100px;
-	margin: 50px 0;
+	max-width: 1920px;
+	height: 140px;
+	margin-top: 50px;
+	padding-top: 60px;
+	background: #C6C3CA;
 	text-align: center;
 	font-size: 1.4em;
 	/*background: #EEEEEE;*/
@@ -369,7 +372,7 @@ footer .copy {
 	}
 	
 	.normal-nav {
-		padding: 0 10px;
+		padding: 2px 10px;
 		/*height: 40px;*/
 	}
 	.normal-nav .logo {
@@ -440,7 +443,11 @@ footer .copy {
 	.normal-nav .menu ul li a:hover {
 		border-radius: 6px;
 	}
-	
+	.content {
+		padding: 0px;
+		top: 50px;
+		display: block;
+	}
 		
 	.left{
 		font-size: 1.8em;
@@ -449,9 +456,7 @@ footer .copy {
 	.right {
 		display: none;
 	}
-	.content {
-		padding: 0px;
-	}
+	
 }
 
 @media only screen and (max-width:850px) {
