@@ -1,7 +1,3 @@
-/** {
-	padding: 0;
-	margin: 0;
-}*/
 
 a {
 	text-decoration: none;
@@ -49,7 +45,6 @@ a:hover {
 header {
 	position: fixed;
 	background: #c6c3ca;
-	/*border-bottom: 1px solid #333;*/
 	top: 0;
 	width: 100%;
 	min-width: 300px;
@@ -233,9 +228,6 @@ a {
 }
 
 .bodytxt {
-	/*font-size: 0.9em;
-	line-height: 1.6em;*/
-	
 	height: auto;
 	/*width: 100%;*/
 }
@@ -335,16 +327,14 @@ a {
 footer {
 	position: relative;
 	top: 40px;
-	color: #333;
+	color: #534b50;
 	width: 100%;
 	max-width: 1920px;
-	height: 140px;
 	margin-top: 50px;
-	padding-top: 60px;
+	padding: 60px 0;
 	background: #C6C3CA;
 	text-align: center;
-	font-size: 1.4em;
-	/*background: #EEEEEE;*/
+	font-size: 1.8em;
 }
 
 footer ul li {
@@ -441,10 +431,8 @@ footer .copy {
 	}
 	.content {
 		padding: 0px;
-		top: 50px;
+		top: 40px;
 		display: block;
-		/*margin: 0 auto;*/
-		/*width: 100%;*/
 	}
 		
 	.left{

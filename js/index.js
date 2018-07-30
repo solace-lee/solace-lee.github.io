@@ -11,12 +11,8 @@ $(window).load(function() {
 		database = data;
 		main(database);
 	});
-	//更改小屏模式下内容区域宽度,避免溢出影响体验
-//	var w = $(document.body).width();
-//	if(w < 700) {
-//		$('.txt').css('width', w - 60 + 'px');
-//	}
-
+	//代码高亮方法
+	heighlight();
 });
 
 //加载首页主数据和最近更新的数据
@@ -50,7 +46,29 @@ function main(database) {
 	tagname();
 	//调用标签批量改名方法
 	tagChange();
+	
 };
+
+function heighlight(){
+	var rendererMD = new marked.Renderer();
+    marked.setOptions({
+      renderer: rendererMD,
+      gfm: true,
+      tables: true,
+      breaks: false,
+      pedantic: false,
+      sanitize: false,
+      smartLists: true,
+      smartypants: false
+    });
+    var markdownString = '```js\n console.log("hello"); \n```';
+    marked.setOptions({
+        highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+      }
+    });
+	$('#content').html(marked(markdownString));
+}
 
 //加载博客内容
 function mdtxt() {
@@ -65,6 +83,7 @@ function mdtxt() {
 			})
 		})(i), 0)
 	}
+	
 };
 
 //获取Jason数据流中的标签名,并把存储标签名的数组进行排序并去重，然后append到首页
