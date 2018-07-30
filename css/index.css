@@ -392,7 +392,7 @@ footer .copy {
 		font-size: 1.2em;
 	}
 	.normal-nav span:hover {
-		text-shadow: 1px 1px 2px rgba(130, 180, 64, 0.8);
+		text-shadow: 1px 1px 2px rgba(160, 144, 154, 0.9);
 	}
 	.normal-nav .menu {
 		position: fixed;
@@ -402,7 +402,7 @@ footer .copy {
 		-webkit-transition: right 500ms;
 		width: 100%;
 		height: 100%;
-		background: rgba(0, 0, 0, 0.4);
+		background: rgba(0, 0, 0, 0.5);
 		text-align: center;
 		z-index: 100;
 		/*display: none;*/
@@ -414,7 +414,7 @@ footer .copy {
 		-webkit-transition: right 500ms;
 		width: 150px;
 		height: 100%;
-		background: #fff;
+		background: #efe2e9;
 		z-index: 100;
 	}
 	.normal-nav .menu ul li {
