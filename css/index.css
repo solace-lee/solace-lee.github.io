@@ -364,15 +364,22 @@ footer .copy {
 	.main-img {
 		font-size: 8px;
 	}
-
+	header{
+		height: 40px;
+	}
+	
 	.normal-nav {
 		padding: 0 10px;
+		/*height: 40px;*/
 	}
 	.normal-nav .logo {
-		line-height: 50px;
+		line-height: 40px;
+		padding: 0;
+		height: 40px;
 	}
 	.normal-nav .logo a {
 		font-size: 22px;
+		/*height: 40px;*/
 	}
 	.normal-nav .logo p {
 		display: none;
