@@ -178,19 +178,20 @@ a {
 .title a {
 	color: #534b50;
 	font-size: 1.4em;
+	font-weight: bold;
 	padding: 10px 0;
 }
 
 .bodytitle {
 	color: #534b50;
-	font-size: 1.4em;
+	font-size: 1.3em;
 	font-weight: bold;
 	padding: 10px 0;
 }
 
 .info {
 	font-size: 1em;
-	padding: 10px 0;
+	padding: 6px 0;
 }
 
 .bodyinfo {
