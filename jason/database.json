@@ -1,5 +1,13 @@
 [
 	{
+		"title":"博客的优化暂时告一段落",
+		"date":"20180731",
+		"label":["Other"],
+		"content":"",
+		"code_link":"posts/2018073100.md",
+		"demo_link":""
+	},
+	{
 		"title":"即将引入Markdown语言作为博客内容",
 		"date":"20180727",
 		"label":["Markdown","JQuery"],

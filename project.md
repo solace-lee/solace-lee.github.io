@@ -28,3 +28,8 @@
 ```
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
 ```
+
+**vue.js库**
+```
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
