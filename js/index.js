@@ -7,7 +7,7 @@ var　 md;
 
 $(window).load(function() {
 	//通过Ajax获取Jason数据并保存到一个全局变量中
-	$.getJSON("jason/database.json", function(data) {
+	$.getJSON("json/database.json", function(data) {
 		database = data;
 		main(database);
 	});
