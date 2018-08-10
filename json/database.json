@@ -1,5 +1,13 @@
 [
 	{
+		"title":"vuejs的学习笔记",
+		"date":"20180810",
+		"label":["VueJs"],
+		"content":"",
+		"code_link":"posts/2018081000.md",
+		"demo_link":""
+	},
+	{
 		"title":"博客的优化暂时告一段落",
 		"date":"20180731",
 		"label":["Other"],
