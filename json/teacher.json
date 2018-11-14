@@ -3,8 +3,8 @@
     "teacherid": 101,
     "name": "陈福兰",
     "subject": "chinese",
-    "class1": "初一03班",
-    "class2": "初一04班",
+    "class1": "初一04班",
+    "class2": "初一03班",
     "class3": "初一08班",
     "class4": "初一01班",
     "class5": "初一02班",
@@ -18,12 +18,12 @@
     "subject": "math",
     "class1": "初一04班",
     "class2": "初一08班",
-    "class3": "",
-    "class4": "",
-    "class5": "",
-    "class6": "",
-    "class7": "",
-    "class8": ""
+    "class3": "初一01班",
+    "class4": "初一02班",
+    "class5": "初一03班",
+    "class6": "初一05班",
+    "class7": "初一06班",
+    "class8": "初一07班"
   },
   {
     "teacherid": 103,
@@ -31,12 +31,12 @@
     "subject": "english",
     "class1": "初一02班",
     "class2": "初一04班",
-    "class3": "",
-    "class4": "",
-    "class5": "",
-    "class6": "",
-    "class7": "",
-    "class8": ""
+    "class3": "初一01班",
+    "class4": "初一03班",
+    "class5": "初一05班",
+    "class6": "初一06班",
+    "class7": "初一07班",
+    "class8": "初一08班"
   },
   {
     "teacherid": 104,
@@ -57,12 +57,12 @@
     "subject": "english",
     "class1": "初一06班",
     "class2": "初一08班",
-    "class3": "",
-    "class4": "",
-    "class5": "",
-    "class6": "",
-    "class7": "",
-    "class8": ""
+    "class3": "初一01班",
+    "class4": "初一02班",
+    "class5": "初一03班",
+    "class6": "初一04班",
+    "class7": "初一05班",
+    "class8": "初一07班"
   },
   {
     "teacherid": 106,
@@ -70,12 +70,12 @@
     "subject": "english",
     "class1": "初一05班",
     "class2": "初一08班",
-    "class3": "",
-    "class4": "",
-    "class5": "",
-    "class6": "",
-    "class7": "",
-    "class8": ""
+    "class3": "初一01班",
+    "class4": "初一02班",
+    "class5": "初一03班",
+    "class6": "初一04班",
+    "class7": "初一06班",
+    "class8": "初一07班"
   },
   {
     "teacherid": 107,
@@ -83,12 +83,12 @@
     "subject": "chinese",
     "class1": "初一02班",
     "class2": "初一08班",
-    "class3": "",
-    "class4": "",
-    "class5": "",
-    "class6": "",
-    "class7": "",
-    "class8": ""
+    "class3": "初一01班",
+    "class4": "初一03班",
+    "class5": "初一04班",
+    "class6": "初一05班",
+    "class7": "初一06班",
+    "class8": "初一07班"
   },
   {
     "teacherid": 108,
@@ -96,12 +96,12 @@
     "subject": "chinese",
     "class1": "初一01班",
     "class2": "初一07班",
-    "class3": "",
-    "class4": "",
-    "class5": "",
-    "class6": "",
-    "class7": "",
-    "class8": ""
+    "class3": "初一02班",
+    "class4": "初一03班",
+    "class5": "初一04班",
+    "class6": "初一05班",
+    "class7": "初一06班",
+    "class8": "初一08班"
   },
   {
     "teacherid": 109,
@@ -109,12 +109,12 @@
     "subject": "chinese",
     "class1": "初一05班",
     "class2": "初一06班",
-    "class3": "",
-    "class4": "",
-    "class5": "",
-    "class6": "",
-    "class7": "",
-    "class8": ""
+    "class3": "初一01班",
+    "class4": "初一02班",
+    "class5": "初一03班",
+    "class6": "初一04班",
+    "class7": "初一07班",
+    "class8": "初一08班"
   },
   {
     "teacherid": 110,
@@ -122,12 +122,12 @@
     "subject": "math",
     "class1": "初一01班",
     "class2": "初一05班",
-    "class3": "",
-    "class4": "",
-    "class5": "",
-    "class6": "",
-    "class7": "",
-    "class8": ""
+    "class3": "初一02班",
+    "class4": "初一03班",
+    "class5": "初一04班",
+    "class6": "初一06班",
+    "class7": "初一07班",
+    "class8": "初一08班"
   },
   {
     "teacherid": 111,
@@ -135,12 +135,12 @@
     "subject": "english",
     "class1": "初一01班",
     "class2": "初一03班",
-    "class3": "",
-    "class4": "",
-    "class5": "",
-    "class6": "",
-    "class7": "",
-    "class8": ""
+    "class3": "初一02班",
+    "class4": "初一04班",
+    "class5": "初一05班",
+    "class6": "初一06班",
+    "class7": "初一07班",
+    "class8": "初一08班"
   },
   {
     "teacherid": 112,
@@ -148,11 +148,11 @@
     "subject": "math",
     "class1": "初一02班",
     "class2": "初一03班",
-    "class3": "",
-    "class4": "",
-    "class5": "",
-    "class6": "",
-    "class7": "",
-    "class8": ""
+    "class3": "初一01班",
+    "class4": "初一04班",
+    "class5": "初一05班",
+    "class6": "初一06班",
+    "class7": "初一07班",
+    "class8": "初一08班"
   }
 ]
